@@ -23,6 +23,10 @@ public class DebugLog {
      */
     public static void d(Object obj){
         String TAG = obj.getClass().getSimpleName();
+        d(TAG,obj);
+    }
+
+    public static void d(String TAG,Object obj){
         Field[] fields = obj.getClass().getDeclaredFields(); // 获取属性
         Log.d(TAG,"======== show class " + obj.getClass().getCanonicalName() + " ========");
         for (Field field : fields) {
