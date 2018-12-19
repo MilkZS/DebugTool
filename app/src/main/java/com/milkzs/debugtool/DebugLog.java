@@ -9,9 +9,6 @@ import java.util.Arrays;
 public class DebugLog {
 
    // private static String TAG = Thread.currentThread().getStackTrace()[1].getClassName();
-
-
-
     public static void d(String sLog){
 //        Log.d(TAG,sLog);
     }
@@ -48,6 +45,10 @@ public class DebugLog {
         }
     }
 
-
+    public static void d(List<Object> objList){
+        for(Object obj:objList){
+            d(obj);
+        }
+    }
 
 }
